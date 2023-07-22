@@ -11,9 +11,10 @@
  */
 int print_last_digit(int c)
 {
-	int l;
+	long l, cc;
 
-	l = abs(c) % 10;
+	cc = c;
+	l = labs(cc) % 10;
 	_putchar('0' + l);
 	return (l);
 }
