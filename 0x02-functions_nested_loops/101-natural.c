@@ -1,12 +1,11 @@
-#include "main.h"
 #include <stdio.h>
 
 /**
- * print_mul - test
+ * main - test
  *
- * return: void
+ * Return: Always 0
  */
-void print_mul(void)
+int main(void)
 {
 	short i;
 	int sum;
@@ -18,4 +17,5 @@ void print_mul(void)
 			sum += i;
 	}
 	printf("%d\n", sum);
+	return (0);
 }
