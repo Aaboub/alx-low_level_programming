@@ -13,7 +13,8 @@ int main(void)
 	fib1 = 1;
 	fib2 = 2;
 	tmp = fib1 + fib2;
-	while (tmp < 4000000){
+	while (tmp < 4000000)
+	{
 		if (tmp % 2)
 			sum += tmp;
 		fib1 = fib2;
