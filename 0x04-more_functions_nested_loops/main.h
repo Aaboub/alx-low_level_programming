@@ -4,6 +4,6 @@
 #include <stdio.h>
 
 void _putchar(char c);
-void print_numbers(void);
+void more_numbers(void);
 
 #endif /* MAIN_H */
