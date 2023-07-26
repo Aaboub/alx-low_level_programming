@@ -1,4 +1,5 @@
 #include <string.h>
+#include "main.h"
 
 /**
  * print_rev - Entry
