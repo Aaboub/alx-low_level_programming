@@ -8,7 +8,7 @@
  *
  * Return: pointer to string
  */
-char *_strcmp(char *dest, char *src)
+int _strcmp(char *dest, char *src)
 {
 	return (strcmp(dest, src));
 }
