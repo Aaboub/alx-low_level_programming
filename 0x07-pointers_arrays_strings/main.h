@@ -1,1 +1,1 @@
-unsigned int _strspn(char *s, char *accept);
+void set_string(char **s, char *to);
