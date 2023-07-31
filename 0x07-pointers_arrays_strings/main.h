@@ -1,1 +1,1 @@
-void print_diagsums(int *a, int size);
+char *_strstr(char *haystack, char *needle);
