@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * _strstr() - Entry point
+ * _strstr - Entry point
  *
  * @haystack: param
  * @needle: param
