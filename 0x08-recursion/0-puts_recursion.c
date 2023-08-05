@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * _puts_recursion - Entry point
@@ -10,5 +9,11 @@
  */
 void _puts_recursion(char *s)
 {
-	puts(s);
+	if (*s)
+	{
+		_putchar(*s);
+		_puts_recursion(s + 1);
+		return;
+	}
+	_putchar('\n');
 }
