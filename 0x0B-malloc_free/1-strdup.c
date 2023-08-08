@@ -13,9 +13,10 @@ char *_strdup(char *str)
 	char *p;
 	unsigned int len = (unsigned int)strlen(str);
 
-
-	p = malloc(len * sizeof(char));
+	if (!str)
+		return (NULL);
+	p = malloc((len + 1) * sizeof(char));
 	if (p)
-		memcpy(p, str, len);
+		memcpy(p, str, len + 1);
 	return (p);
 }
