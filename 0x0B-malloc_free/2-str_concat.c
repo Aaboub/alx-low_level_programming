@@ -12,7 +12,7 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *p;
-	unsigned int len1, len2;
+	unsigned int len1 = 0, len2 = 0;
 
 	if (s1)
 		len1 = (unsigned int)strlen(s1);
@@ -22,8 +22,10 @@ char *str_concat(char *s1, char *s2)
 	p = malloc((len1 + len2 + 1) * sizeof(char));
 	if (p)
 	{
-		memcpy(p, s1, len1);
-		memcpy(p + len1, s2, len2 + 1);
+		if (s1)
+			memcpy(p, s1, len1);
+		if (s2)
+			memcpy(p + len1, s2, len2 + 1);
 		return (p);
 	}
 	else
