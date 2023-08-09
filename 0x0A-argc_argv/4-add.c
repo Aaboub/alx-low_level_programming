@@ -11,15 +11,14 @@
  */
 int main(int arc, char **arv)
 {
-	long sum = 0;
+	long sum = 0, val;
 	int i;
-	char *endptr;
-	long val;
+	char *end;
 
 	for (i = 1; i < arc; i++)
 	{
-		val = strtol(arv[i], &endptr, 10);
-		if (arv[i] == endptr)
+		val = strtol(arv[i], &end, 10);
+		if (arv[i] == end || *end != '\0')
 		{
 			printf("Error\n");
 			return (1);
