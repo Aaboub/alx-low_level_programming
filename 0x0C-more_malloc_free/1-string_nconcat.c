@@ -24,9 +24,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		n = len2;
 
 	p = malloc((len1 + n + 1) * sizeof(char));
-	memset(p, '\0', len1 + n + 1);
 	if (p)
 	{
+		memset(p, '\0', len1 + n + 1);
 		if (s1)
 			memcpy(p, s1, len1);
 		if (s2)
