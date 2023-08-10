@@ -30,6 +30,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			memcpy(p, s1, len1);
 		if (s2)
 			memcpy(p + len1, s2, n);
+		p[len1 + n + 1] = '\0';
 		return (p);
 	}
 	else
