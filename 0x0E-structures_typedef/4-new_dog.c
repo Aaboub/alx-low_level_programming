@@ -34,9 +34,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	if (!dog)
 		return (NULL);
-
-	if(!name || !owner)
-		return (NULL);
 	dog->name = malloc(sizeof(char) * (strlen(name) + 1));
 	if (!dog->name)
 	{
