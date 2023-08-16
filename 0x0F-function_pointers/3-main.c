@@ -14,9 +14,9 @@ int main(int argc, char **argv)
 	int a, b;
 	char *op;
 
-	int (*p(char *s))(int, int);
+	int (*p)(int, int);
 
-	if (argc < 4)
+	if (argc != 4)
 	{
 		printf("Error\n");
 		return (98);
@@ -38,7 +38,8 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		return (100);
 	}
-
-	printf("%d\n", get_op_func(op)(a, b));
+	
+	p = get_op_func(op);
+	printf("%d\n", p(a, b));
 	return (0);
 }
