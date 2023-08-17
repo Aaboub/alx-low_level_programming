@@ -31,7 +31,7 @@ int main(int argc, char **argv)
 		return (99);
 	}
 
-	if ((!strcmp(op, "/") || strcmp(op, "%")) && b == 0)
+	if ((!strcmp(op, "/") || !strcmp(op, "%")) && b == 0)
 	{
 		printf("Error\n");
 		return (100);
