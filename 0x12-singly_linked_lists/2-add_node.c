@@ -21,10 +21,10 @@ list_t *add_node(list_t **head, const char *str)
 		{
 			tmp = *head;
 			*head = tmp->next;
-			free(tmp->str);
+			if (tmp->str != NULL)
+				free(tmp->str);
 			free(tmp);
 		}
-		free(head);
 		return (NULL);
 	}
 	if (str != NULL)
@@ -36,10 +36,10 @@ list_t *add_node(list_t **head, const char *str)
 			{
 				tmp = *head;
 				*head = tmp->next;
-				free(tmp->str);
+				if (tmp->str != NULL)
+					free(tmp->str);
 				free(tmp);
 			}
-			free(head);
 			return (NULL);
 		}
 	}
