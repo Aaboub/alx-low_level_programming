@@ -48,6 +48,8 @@ void print_number(int n)
 		l = tmp / k;
 		_putchar('0' + l);
 		tmp = tmp - (l * k);
+		if (tmp == 0)
+			_putchar('0');
 		k = k / 10;
 	}
 }
