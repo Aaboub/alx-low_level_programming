@@ -32,7 +32,6 @@ list_t *add_node(list_t **head, const char *str)
 	if (new == NULL)
 	{
 		free(new);
-		free_list(*head);
 		return (NULL);
 	}
 	if (str != NULL)
@@ -41,7 +40,6 @@ list_t *add_node(list_t **head, const char *str)
 		if (new->str == NULL)
 		{
 			free(new);
-			free_list(*head);
 			return (NULL);
 		}
 	}
