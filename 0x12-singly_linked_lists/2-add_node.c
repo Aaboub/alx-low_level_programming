@@ -3,6 +3,21 @@
 #include "lists.h"
 
 /**
+ * free_list - Entry
+ * @head: param
+ */
+void free_list(list_t *head)
+{
+	if (head)
+	{
+		free_list(head->next);
+		if (head->str)
+			free(head->str);
+		free(head);
+	}
+}
+
+/**
  * add_node - entry
  * @head: param
  * @str: param
@@ -12,19 +27,11 @@
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new;
-	list_t *tmp;
 
 	new = malloc(sizeof(list_t));
 	if (new == NULL)
 	{
-		while (*head != NULL)
-		{
-			tmp = *head;
-			*head = tmp->next;
-			if (tmp->str != NULL)
-				free(tmp->str);
-			free(tmp);
-		}
+		free_list(*head);
 		return (NULL);
 	}
 	if (str != NULL)
@@ -32,14 +39,7 @@ list_t *add_node(list_t **head, const char *str)
 		new->str = strdup(str);
 		if (new->str == NULL)
 		{
-			while (*head != NULL)
-			{
-				tmp = *head;
-				*head = tmp->next;
-				if (tmp->str != NULL)
-					free(tmp->str);
-				free(tmp);
-			}
+			free_list(*head);
 			return (NULL);
 		}
 	}
