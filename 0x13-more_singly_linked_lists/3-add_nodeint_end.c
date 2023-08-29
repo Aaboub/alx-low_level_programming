@@ -5,14 +5,14 @@
 /**
  * add_nodeint_end - entry
  * @head: param
- * @str: param
+ * @n: param
  *
  * Return: ptr
  */
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-	list_t *new;
-	list_t *tmp = *head;
+	listint_t *new;
+	listint_t *tmp = *head;
 
 	new = malloc(sizeof(listint_t));
 	if (new == NULL)
